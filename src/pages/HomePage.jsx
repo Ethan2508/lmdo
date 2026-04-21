@@ -149,9 +149,8 @@ function HomePage() {
               const price = meta.priceKey ? prices[meta.priceKey] : null;
               return (
                 <Link key={p.slug} to={`/${p.slug}`} className={`hp-product-card hp-product-card--${i % 3}`}>
-                  {/* Placeholder image — remplacer src par la vraie photo */}
-                  <div className="hp-product-img" aria-hidden="true">
-                    <span className="hp-product-emoji">{meta.icon}</span>
+                  <div className="hp-product-img">
+                    <img src={meta.image} alt={p.name} loading="lazy" />
                   </div>
                   <div className="hp-product-body">
                     <h3>{p.name}</h3>
