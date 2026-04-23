@@ -150,7 +150,10 @@ function HomePage() {
               return (
                 <Link key={p.slug} to={`/${p.slug}`} className={`hp-product-card hp-product-card--${i % 3}`}>
                   <div className="hp-product-img">
-                    <img src={meta.image} alt={p.name} loading="lazy" />
+                    {meta.image
+                      ? <img src={meta.image} alt={p.name} loading="lazy" />
+                      : <span className="hp-product-icon" aria-hidden="true">{meta.icon ?? "✦"}</span>
+                    }
                   </div>
                   <div className="hp-product-body">
                     <h3>{p.name}</h3>

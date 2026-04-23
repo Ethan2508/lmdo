@@ -23,7 +23,10 @@ function App() {
             element={<ProductPage product={product} />}
           />
         ))}
-        <Route path="/rachat-bijoux" element={<Navigate to="/rachat-or" replace />} />
+        <Route path="/rachat-bijoux" element={<Navigate to="/rachat-bijoux-or" replace />} />
+        <Route path="/rachat-or" element={<Navigate to="/rachat-lingot-or" replace />} />
+        <Route path="/rachat-menagere" element={<Navigate to="/rachat-argenterie" replace />} />
+        <Route path="/rachat-sacs-luxe" element={<Navigate to="/rachat-maroquinerie-luxe" replace />} />
         <Route path="/rachat-monnaie" element={<Navigate to="/rachat-piece-argent" replace />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
