@@ -32,7 +32,7 @@ export const productMeta = {
   },
   "rachat-or-dentaire": {
     icon: "🦷",
-    image: "/lingot-or.png",
+    image: "/or-dentaire.jpg",
     priceKey: "or",
     shortText: "Couronnes et bridges en or rachetes apres analyse du titre."
   },
