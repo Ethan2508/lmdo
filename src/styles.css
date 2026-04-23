@@ -332,7 +332,18 @@ a {
   font-size: clamp(1rem, 1.8vw, 1.2rem);
   max-width: 52ch;
   line-height: 1.6;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hp-hero-address {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+}
+.hp-hero-address-pin {
+  color: var(--gold);
+  margin-right: 0.3em;
 }
 
 .hp-hero-actions {
@@ -704,6 +715,37 @@ a {
 
 .hp-process-cta {
   text-align: center;
+}
+
+/* ── BANNIÈRE RDV ── */
+.hp-rdv-banner {
+  background: var(--text);
+  padding: 2.8rem 0;
+}
+.hp-rdv-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.hp-rdv-label {
+  font-family: 'Fraunces', serif;
+  color: var(--gold);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+}
+.hp-rdv-sub {
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  font-size: 0.95rem;
+}
+@media (max-width: 640px) {
+  .hp-rdv-inner {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* ── NEWS ── */

@@ -132,9 +132,9 @@ function Layout() {
               </div>
               <div>
                 <h4>Coordonnees</h4>
+                <p><strong>{siteConfig.address}</strong></p>
                 <p><a href={siteConfig.phoneHref}>{siteConfig.phone}</a></p>
                 <p><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></p>
-                <p>{siteConfig.address}</p>
               </div>
             </div>
           </div>

@@ -83,6 +83,10 @@ function HomePage() {
             Estimation gratuite, sans engagement, basée sur le cours du jour.
             Or, montres, pièces, argenterie et accessoires de luxe.
           </p>
+          <p className="hp-hero-address">
+            <span className="hp-hero-address-pin" aria-hidden="true">▸</span>
+            {siteConfig.address}
+          </p>
           <div className="hp-hero-actions">
             <Link className="btn btn-gold btn-lg" to="/contact">
               Demander une estimation gratuite
@@ -233,6 +237,19 @@ function HomePage() {
               Démarrer mon estimation
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── BANNIÈRE RDV ── */}
+      <section className="hp-rdv-banner">
+        <div className="container hp-rdv-inner">
+          <div className="hp-rdv-text">
+            <p className="hp-rdv-label">Vous ne pouvez pas vous déplacer&nbsp;?</p>
+            <p className="hp-rdv-sub">Prenez rendez-vous — nous nous adaptons à votre emploi du temps.</p>
+          </div>
+          <a className="btn btn-gold btn-lg" href={siteConfig.phoneHref}>
+            Prendre rendez-vous
+          </a>
         </div>
       </section>
 

@@ -3,7 +3,7 @@ export const siteConfig = {
   domain: "https://www.lamaisondelor.fr",
   phone: "06 18 75 35 52",
   phoneHref: "tel:+33618753552",
-  email: "contact26.lmdo@gmail.com",
+  email: "contactreservations.lmdo@gmail.com",
   city: "Lyon",
   region: "Auvergne-Rhône-Alpes",
   address: "57 Rue Président Edouard Herriot, 69002 Lyon"
