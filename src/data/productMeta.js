@@ -20,13 +20,13 @@ export const productMeta = {
   },
   "rachat-lingot-argent": {
     icon: "▪️",
-    image: "/piece-argent.png",
+    image: "/lingot-argent.png",
     priceKey: "argent",
     shortText: "Lingots et barres d'argent evalues au cours spot du jour."
   },
   "rachat-bijoux-or": {
     icon: "💍",
-    image: "/lingot-or.png",
+    image: "/bijoux-or.jpg",
     priceKey: "or",
     shortText: "Bagues, chaines, bracelets et colliers en or, meme casses."
   },
@@ -38,7 +38,7 @@ export const productMeta = {
   },
   "rachat-billet-collection": {
     icon: "🎴",
-    image: null,
+    image: "/billet-collection.jpg",
     priceKey: null,
     shortText: "Billets rares et anciens estimes selon leur rarete et etat."
   },
@@ -56,7 +56,7 @@ export const productMeta = {
   },
   "rachat-objet-plaque-or": {
     icon: "✨",
-    image: null,
+    image: "/objet-plaque-or.jpg",
     priceKey: null,
     shortText: "Couverts, cadres et objets plaques or, estimation honnete."
   },
@@ -74,7 +74,7 @@ export const productMeta = {
   },
   "rachat-pierre-precieuse": {
     icon: "💎",
-    image: null,
+    image: "/pierre-precieuses.png",
     priceKey: null,
     shortText: "Diamants, rubis, emeraudes et saphirs expertises selon les 4C."
   }
