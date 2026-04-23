@@ -162,15 +162,13 @@ function HomePage() {
                   <div className="hp-product-body">
                     <h3>{p.name}</h3>
                     <p>{meta.shortText}</p>
-                    {price ? (
-                      <div className="hp-product-price">
-                        <span className="hp-price-live-dot" aria-hidden="true">●</span>
-                        {price} €/g
-                      </div>
-                    ) : (
-                      <div className="hp-product-price hp-product-price--free">Sur estimation</div>
-                    )}
-                    <span className="hp-product-cta">Découvrir →</span>
+                    <Link
+                      to="/contact"
+                      className="hp-product-estimate-btn"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Demander une estimation
+                    </Link>
                   </div>
                 </Link>
               );
