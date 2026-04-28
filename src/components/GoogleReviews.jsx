@@ -103,7 +103,7 @@ export default function GoogleReviews() {
           </div>
           <a
             className="btn btn-line"
-            href="https://search.google.com/local/writereview?placeid=ChIJix3zjBTr9EcRhJZyrOHFpCU"
+            href="https://g.page/r/CYSWcqzhxaQlEAE/review"
             target="_blank"
             rel="noopener noreferrer"
           >
