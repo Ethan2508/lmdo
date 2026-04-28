@@ -224,7 +224,7 @@ function HomePage() {
           <div className="hp-histoire-timeline">
             <div className="hp-histoire-milestone">
               <span className="hp-histoire-year">2021</span>
-              <p>Fondation de la SAS à Lyon par Sacha Teboul, spécialisée dans le rachat de métaux précieux.</p>
+              <p>Ouverture de La Maison de l'Or au cœur de Lyon, avec une expertise dédiée aux métaux précieux.</p>
             </div>
             <div className="hp-histoire-milestone">
               <span className="hp-histoire-year">2022</span>
