@@ -913,6 +913,75 @@ a {
   .gr-grid { grid-template-columns: 1fr; }
 }
 
+/* Carrousel */
+.gr-carousel-wrap {
+  margin-top: 2.5rem;
+}
+
+.gr-carousel-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+@media (max-width: 900px) {
+  .gr-carousel-track { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 580px) {
+  .gr-carousel-track { grid-template-columns: 1fr; }
+}
+
+.gr-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.gr-btn-prev,
+.gr-btn-next {
+  background: none;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--gold-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+.gr-btn-prev:hover,
+.gr-btn-next:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.gr-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.gr-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--line);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+.gr-dot--on {
+  background: var(--gold-strong);
+  transform: scale(1.3);
+}
+
 .gr-card {
   background: var(--panel);
   border: 1px solid var(--line);
