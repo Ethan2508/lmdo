@@ -1300,6 +1300,28 @@ textarea:focus-visible {
   margin: 0 0 0.3rem;
 }
 
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-credit {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+}
+
+.footer-credit a {
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-credit a:hover {
+  color: var(--gold);
+}
+
 .footer-bottom {
   padding-top: 1.2rem;
   text-align: center;

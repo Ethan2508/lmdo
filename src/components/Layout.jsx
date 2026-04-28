@@ -169,7 +169,10 @@ function Layout() {
 
           <div className="footer-bottom">
             <p>© {new Date().getFullYear()} {siteConfig.name} — SAS au capital de 5 000 € — SIREN 908 128 721 — {siteConfig.address}</p>
-            <p><NavLink to="/mentions-legales" onClick={closeAll}>Mentions légales</NavLink></p>
+            <div className="footer-bottom-right">
+              <NavLink to="/mentions-legales" onClick={closeAll}>Mentions légales</NavLink>
+              <span className="footer-credit">Site réalisé par <a href="https://stapes.fr" target="_blank" rel="noopener noreferrer">stapes.fr</a></span>
+            </div>
           </div>
         </div>
       </footer>
