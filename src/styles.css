@@ -1303,28 +1303,33 @@ textarea:focus-visible {
 .footer-bottom-right {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .footer-credit {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.3);
+  color: var(--muted);
 }
 
 .footer-credit a {
-  color: rgba(255,255,255,0.45);
+  color: var(--gold-strong);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .footer-credit a:hover {
-  color: var(--gold);
+  color: var(--text);
 }
 
 .footer-bottom {
   padding-top: 1.2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .footer-bottom p {
