@@ -204,7 +204,7 @@ function HomePage() {
             <p className="eyebrow">Notre histoire</p>
             <h2>Présents à Lyon depuis 2021</h2>
             <p className="hp-histoire-lead">
-              La Maison de l'Or a été fondée par <strong>Sacha Teboul</strong> avec une conviction simple :
+              La Maison de l'Or a été fondée avec une conviction simple :
               chaque client mérite une estimation honnête, expliquée, basée sur les vrais cours du marché
               — sans pression, sans commission cachée.
             </p>
