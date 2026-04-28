@@ -872,6 +872,127 @@ a {
 }
 
 /* ── CTA FINALE ── */
+/* ── GOOGLE REVIEWS ── */
+.gr-section {
+  background: var(--bg-soft);
+}
+
+.gr-overall {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.gr-overall-score {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-strong);
+  line-height: 1;
+}
+
+.gr-overall-total {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.gr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .gr-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 580px) {
+  .gr-grid { grid-template-columns: 1fr; }
+}
+
+.gr-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.gr-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.gr-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.gr-avatar--fallback {
+  background: var(--gold);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gr-author {
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.gr-time {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.gr-stars {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.gr-star {
+  color: #d1d5db;
+  font-size: 1rem;
+}
+
+.gr-star--on {
+  color: #f59e0b;
+}
+
+.gr-text {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gr-google-logo {
+  height: 16px;
+  width: auto;
+  opacity: 0.5;
+  margin-top: auto;
+}
+
 .hp-final-cta {
   position: relative;
   overflow: hidden;

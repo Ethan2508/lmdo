@@ -5,6 +5,7 @@ import { productRoutes } from "../data/products";
 import { productMeta } from "../data/productMeta";
 import { news } from "../data/news";
 import { usePrices } from "../context/PricesContext";
+import GoogleReviews from "../components/GoogleReviews";
 
 const STATS = [
   { value: "2021", label: "Année de création" },
@@ -323,6 +324,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── AVIS GOOGLE ── */}
+      <GoogleReviews />
 
       {/* ── CTA FINALE ── */}
       <section className="hp-final-cta">
