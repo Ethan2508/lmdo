@@ -174,12 +174,12 @@ a {
   background: #fff;
   border: 1px solid rgba(175, 126, 47, 0.2);
   border-radius: var(--radius);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  min-width: 210px;
-  padding: 0.45rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  min-width: 580px;
+  padding: 0.75rem;
   display: none;
-  flex-direction: column;
-  gap: 0.1rem;
+  flex-direction: row;
+  gap: 0;
   z-index: 50;
 }
 
@@ -187,13 +187,35 @@ a {
   display: flex;
 }
 
+.dropdown-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(175, 126, 47, 0.12);
+  padding: 0 0.4rem;
+}
+.dropdown-col:last-child {
+  border-right: none;
+}
+
+.dropdown-col-label {
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding: 0.35rem 0.85rem 0.55rem;
+  margin-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(175, 126, 47, 0.12);
+}
+
 .dropdown-item {
   display: block;
-  padding: 0.55rem 0.85rem;
-  border-radius: 10px;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
   color: var(--text);
-  font-weight: 600;
-  font-size: 0.93rem;
+  font-weight: 500;
+  font-size: 0.88rem;
   transition: background 0.15s;
 }
 
@@ -681,6 +703,85 @@ a {
   color: rgba(255, 255, 255, 0.55);
   margin: 0;
   line-height: 1.6;
+}
+
+/* ── NOTRE HISTOIRE ── */
+.hp-histoire-section {
+  background: var(--bg);
+}
+
+.hp-histoire-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.hp-histoire-text h2 {
+  margin-bottom: 1.4rem;
+}
+
+.hp-histoire-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 1.1rem;
+}
+
+.hp-histoire-text p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.hp-histoire-timeline {
+  padding-left: 2rem;
+  border-left: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+}
+
+.hp-histoire-milestone {
+  position: relative;
+  padding: 0 0 2.2rem 1.6rem;
+}
+.hp-histoire-milestone::before {
+  content: '';
+  position: absolute;
+  left: -0.42rem;
+  top: 0.4rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.hp-histoire-milestone--now::before {
+  background: var(--gold-strong);
+  box-shadow: 0 0 0 3px rgba(201,151,61,0.25);
+}
+
+.hp-histoire-year {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold-strong);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.hp-histoire-milestone p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hp-histoire-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
 
 /* ── PROCESSUS ── */

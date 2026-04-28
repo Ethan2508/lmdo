@@ -197,7 +197,50 @@ function HomePage() {
           </div>
         </div>
       </section>
-
+      {/* ── NOTRE HISTOIRE ── */}
+      <section className="section hp-histoire-section">
+        <div className="container hp-histoire-inner">
+          <div className="hp-histoire-text">
+            <p className="eyebrow">Notre histoire</p>
+            <h2>Présents à Lyon depuis 2021</h2>
+            <p className="hp-histoire-lead">
+              La Maison de l'Or a été fondée par <strong>Sacha Teboul</strong> avec une conviction simple :
+              chaque client mérite une estimation honnête, expliquée, basée sur les vrais cours du marché
+              — sans pression, sans commission cachée.
+            </p>
+            <p>
+              Depuis notre ouverture au <strong>57 Rue Président Herriot, Lyon 2e</strong>, nous accompagnons
+              des particuliers dans la valorisation de leurs biens : or, montres, argenterie,
+              maroquinerie de luxe et pierres précieuses.
+            </p>
+            <p>
+              Notre approche n'a pas changé en quatre ans : transparence totale, respect du client,
+              expertise sérieuse. Juste une offre claire, au juste prix.
+            </p>
+            <Link className="btn btn-gold" to="/contact" style={{marginTop: "1.2rem", display: "inline-block"}}>
+              Prendre rendez-vous
+            </Link>
+          </div>
+          <div className="hp-histoire-timeline">
+            <div className="hp-histoire-milestone">
+              <span className="hp-histoire-year">2021</span>
+              <p>Fondation de la SAS à Lyon par Sacha Teboul, spécialisée dans le rachat de métaux précieux.</p>
+            </div>
+            <div className="hp-histoire-milestone">
+              <span className="hp-histoire-year">2022</span>
+              <p>Élargissement au rachat de montres de luxe et de maroquinerie de grandes maisons.</p>
+            </div>
+            <div className="hp-histoire-milestone">
+              <span className="hp-histoire-year">2024</span>
+              <p>Expertise étendue aux pierres précieuses, billets de collection et objets plaqués or.</p>
+            </div>
+            <div className="hp-histoire-milestone hp-histoire-milestone--now">
+              <span className="hp-histoire-year">Aujourd'hui</span>
+              <p>13 catégories de rachat, toujours au cœur de Lyon, toujours au juste prix.</p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* ── PROCESSUS ── */}
       <section className="section hp-process-section">
         <div className="container">

@@ -4,6 +4,25 @@ import { siteConfig } from "../data/site";
 import { productRoutes } from "../data/products";
 import PriceTicker from "./PriceTicker";
 
+const NAV_CATEGORIES = [
+  {
+    label: "Métaux précieux",
+    slugs: [
+      "rachat-piece-or", "rachat-piece-argent", "rachat-lingot-or",
+      "rachat-lingot-argent", "rachat-bijoux-or", "rachat-or-dentaire",
+      "rachat-billet-collection"
+    ]
+  },
+  {
+    label: "Horlogerie & Luxe",
+    slugs: ["rachat-montres", "rachat-maroquinerie-luxe", "rachat-foulards-luxe"]
+  },
+  {
+    label: "Argenterie & Objets",
+    slugs: ["rachat-argenterie", "rachat-objet-plaque-or", "rachat-pierre-precieuse"]
+  }
+];
+
 function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
@@ -59,16 +78,25 @@ function Layout() {
                   className={`dropdown-panel${productsOpen ? " dropdown-open" : ""}`}
                   role="menu"
                 >
-                  {productRoutes.map((p) => (
-                    <NavLink
-                      key={p.slug}
-                      to={`/${p.slug}`}
-                      className="dropdown-item"
-                      role="menuitem"
-                      onClick={closeAll}
-                    >
-                      {p.name}
-                    </NavLink>
+                  {NAV_CATEGORIES.map((cat) => (
+                    <div key={cat.label} className="dropdown-col">
+                      <span className="dropdown-col-label">{cat.label}</span>
+                      {cat.slugs.map((slug) => {
+                        const p = productRoutes.find((r) => r.slug === slug);
+                        if (!p) return null;
+                        return (
+                          <NavLink
+                            key={slug}
+                            to={`/${slug}`}
+                            className="dropdown-item"
+                            role="menuitem"
+                            onClick={closeAll}
+                          >
+                            {p.name}
+                          </NavLink>
+                        );
+                      })}
+                    </div>
                   ))}
                 </div>
               </div>
