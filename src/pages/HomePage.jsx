@@ -374,6 +374,86 @@ function HomePage() {
           </div>
         </div>
       </section>
+      {/* ── ÉDITORIAL LA MAISON DE L'OR ── */}
+      <section className="section hp-maison-section">
+        <div className="container">
+          <div className="hp-maison-head">
+            <span className="hp-maison-eyebrow">La Maison de l'Or</span>
+            <h2 className="hp-maison-title">
+              L'expert lyonnais du <em>négoce des métaux précieux</em><br />
+              et de la haute valeur
+            </h2>
+          </div>
+
+          <div className="hp-maison-grid">
+            <div className="hp-maison-col">
+              <p>
+                Depuis 2021, La Maison de l'Or est devenue une référence à Lyon pour
+                <strong> l'achat, la vente et l'expertise </strong>de l'or, de l'argent
+                et des objets de valeur. Au 57 rue Président Herriot, nos experts vous
+                accueillent avec un seul engagement&nbsp;: une estimation honnête, expliquée,
+                au cours officiel du marché.
+              </p>
+              <p>
+                Vous retrouverez en boutique notre gamme de produits d'investissement&nbsp;:
+                les célèbres <strong>Napoléon</strong>, fleuron de notre vitrine, mais
+                aussi des <strong>Krugerrand, 50 Pesos, 20 Dollars US</strong> et un large
+                choix de <strong>lingots et lingotins</strong> en or et en argent
+                certifiés.
+              </p>
+            </div>
+
+            <div className="hp-maison-col">
+              <p>
+                Notre maison vous offre des services exclusifs&nbsp;: <strong>rachat de
+                vieil or</strong> sous toutes ses formes (bijoux cassés, dentaire,
+                pièces, lingots), expertise <strong>horlogerie de luxe</strong>,
+                <strong> argenterie, maroquinerie</strong> et pierres précieuses.
+              </p>
+              <p>
+                Le conditionnement de vos achats s'effectue sous <strong>sachets scellés
+                et numérotés</strong> mentionnant le numéro de facture, pour conserver
+                vos biens en parfait état et faciliter une revente future. Vous pouvez
+                <strong> retirer en boutique ou opter pour un envoi sécurisé</strong>
+                via notre kit dédié.
+              </p>
+            </div>
+          </div>
+
+          <div className="hp-maison-pillars">
+            <div className="hp-maison-pillar">
+              <h3>L'or physique, un investissement refuge</h3>
+              <p>
+                L'or est <strong>la valeur refuge par excellence</strong>. Sa rareté et
+                sa résistance à l'inflation en font un investissement stable, surtout en
+                période de crise. Indépendant des marchés financiers, hautement liquide,
+                il protège contre la dépréciation des devises et reste vendable partout
+                dans le monde — sans risque de contrepartie. Idéal pour
+                <strong> protéger son patrimoine sur le long terme</strong>.
+              </p>
+            </div>
+            <div className="hp-maison-pillar">
+              <h3>L'argent physique, un placement attractif</h3>
+              <p>
+                L'argent physique représente une ressource <strong>stable et durable</strong>,
+                idéale pour les investisseurs cherchant une solution accessible. Plus
+                abordable que l'or, il offre les mêmes avantages de protection
+                patrimoniale. Tangible et liquide sous forme de pièces ou de lingots, il
+                constitue un <strong>atout financier sur le long terme</strong> pour
+                diversifier son portefeuille.
+              </p>
+            </div>
+          </div>
+
+          <p className="hp-maison-outro">
+            Acheter de l'or et de l'argent physique reste l'une des stratégies les plus
+            prisées pour <strong>diversifier, sécuriser et transmettre son patrimoine</strong>.
+            Contrairement aux placements purement financiers, les métaux précieux sont
+            des actifs tangibles, transmissibles et déconnectés du système bancaire.
+          </p>
+        </div>
+      </section>
+
       {/* ── NOTRE HISTOIRE ── */}
       <section className="section hp-histoire-section">
         <div className="container hp-histoire-inner">
