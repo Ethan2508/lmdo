@@ -18,37 +18,37 @@ const VENTE_ITEMS = [
   {
     title: "Lingot d'or",
     text: "Lingots d'or fin certifiés LBMA, du 100 g au kilo.",
-    icon: "🟧",
+    image: "/lingot-or.png",
     metal: "or",
   },
   {
     title: "Lingotin d'or",
     text: "Petits formats accessibles — 1 g, 5 g, 10 g, 20 g, 50 g.",
-    icon: "🔸",
+    image: "/lingot-or.png",
     metal: "or",
   },
   {
     title: "Pièce d'or",
     text: "Napoléon, Krugerrand, Maple Leaf, Souverain, 50 Pesos…",
-    icon: "🪙",
+    image: "/piece-or.png",
     metal: "or",
   },
   {
     title: "Lingot d'argent",
     text: "Lingots d'argent .999 certifiés, plusieurs grammages.",
-    icon: "◾",
+    image: "/lingot-argent.png",
     metal: "argent",
   },
   {
     title: "Lingotin d'argent",
     text: "Petits lingotins d'argent pour démarrer une collection.",
-    icon: "▪️",
+    image: "/lingot-argent.png",
     metal: "argent",
   },
   {
     title: "Pièce d'argent",
     text: "Pièces d'argent boursables et de collection.",
-    icon: "🥈",
+    image: "/piece-argent.png",
     metal: "argent",
   },
 ];
@@ -260,7 +260,9 @@ function HomePage() {
           <div className="hp-vente-grid">
             {VENTE_ITEMS.map((v) => (
               <div key={v.title} className={`hp-vente-card hp-vente-card--${v.metal}`}>
-                <span className="hp-vente-icon" aria-hidden="true">{v.icon}</span>
+                <div className="hp-vente-img">
+                  <img src={v.image} alt={v.title} loading="lazy" />
+                </div>
                 <div className="hp-vente-body">
                   <span className={`hp-vente-tag hp-vente-tag--${v.metal}`}>
                     {v.metal === "or" ? "Or fin" : "Argent .999"}
@@ -418,6 +420,39 @@ function HomePage() {
           <a className="btn btn-gold btn-lg" href={siteConfig.phoneHref}>
             Prendre rendez-vous
           </a>
+        </div>
+      </section>
+
+      {/* ── KIT D'ENVOI ── */}
+      <section className="section hp-kit-section">
+        <div className="container hp-kit-card">
+          <div className="hp-kit-visual" aria-hidden="true">
+            <div className="hp-kit-envelope">
+              <span className="hp-kit-stamp">✉</span>
+            </div>
+          </div>
+          <div className="hp-kit-content">
+            <p className="eyebrow">Service à distance</p>
+            <h2>Vendez vos bijoux par correspondance</h2>
+            <p className="hp-kit-desc">
+              Trop loin pour passer en boutique&nbsp;? Recevez gratuitement notre <strong>kit
+              d'envoi sécurisé La Poste</strong>, assuré jusqu'à 5&nbsp;000&nbsp;€ avec suivi de
+              parcours. Expertise, offre et paiement sous 24h.
+            </p>
+            <ul className="hp-kit-points">
+              <li>📦 Kit envoyé sous 48h ouvrées</li>
+              <li>🔒 Envoi assuré 5&nbsp;000&nbsp;€</li>
+              <li>💸 Paiement sous 24h</li>
+            </ul>
+            <div className="hp-kit-actions">
+              <Link to="/kit-envoi" className="btn btn-gold">
+                Demander mon kit gratuit →
+              </Link>
+              <Link to="/kit-envoi" className="hp-kit-link">
+                Comment ça marche
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
