@@ -74,7 +74,7 @@ export const productMeta = {
   },
   "rachat-or-investissement": {
     icon: "📊",
-    image: "/lingot-or.png",
+    image: "/pieces-or-argent.jpg",
     priceKey: "or",
     shortText: "Lingots, lingotins et pieces boursables exoneres de TVA, cours LBMA."
   },
