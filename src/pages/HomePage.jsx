@@ -329,9 +329,10 @@ function HomePage() {
               <span className="hp-vente-pillar-icon" aria-hidden="true">💼</span>
               <h3>Diversifier &amp; transmettre</h3>
               <p>
-                Pièces de prestige (Napoléon, Krugerrand, 50 Pesos, 20 Dollars US…), lingots et
-                lingotins constituent un patrimoine tangible, transmissible et déconnecté du
-                système bancaire. Un actif pour préparer l'avenir.
+                Pièces de prestige en or (Napoléon, Krugerrand, 50 Pesos, 20 Dollars US…)
+                et en argent (Hercule, Semeuse, Silver Eagle, Maple Leaf…), lingots et
+                lingotins constituent un patrimoine tangible, transmissible et déconnecté
+                du système bancaire. Un actif pour préparer l'avenir.
               </p>
             </article>
             <article className="hp-vente-pillar">
@@ -396,10 +397,11 @@ function HomePage() {
               </p>
               <p>
                 Vous retrouverez en boutique notre gamme de produits d'investissement&nbsp;:
-                les célèbres <strong>Napoléon</strong>, fleuron de notre vitrine, mais
-                aussi des <strong>Krugerrand, 50 Pesos, 20 Dollars US</strong> et un large
-                choix de <strong>lingots et lingotins</strong> en or et en argent
-                certifiés.
+                en or, les célèbres <strong>Napoléon</strong>, fleurons de notre vitrine,
+                mais aussi des <strong>Krugerrand, 50 Pesos et 20 Dollars US</strong>&nbsp;;
+                en argent, les iconiques <strong>10 Francs Hercule, Semeuse, Silver
+                Eagle et Maple Leaf</strong>, ainsi qu'un large choix de
+                <strong> lingots et lingotins</strong> certifiés.
               </p>
             </div>
 
