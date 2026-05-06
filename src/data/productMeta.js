@@ -72,6 +72,12 @@ export const productMeta = {
     priceKey: null,
     shortText: "Foulards de maisons de luxe, toutes collections."
   },
+  "rachat-or-investissement": {
+    icon: "📊",
+    image: "/lingot-or.png",
+    priceKey: "or",
+    shortText: "Lingots, lingotins et pieces boursables exoneres de TVA, cours LBMA."
+  },
   "rachat-pierre-precieuse": {
     icon: "💎",
     image: "/pierre-precieuses.png",

@@ -10,7 +10,7 @@ import GoogleReviews from "../components/GoogleReviews";
 const STATS = [
   { value: "2021", label: "Année de création" },
   { value: "100%", label: "Estimation gratuite" },
-  { value: "4", label: "Expertises reconnues" },
+  { value: "5", label: "Expertises reconnues" },
   { value: "Lyon", label: "Au cœur du Rhône" },
 ];
 
@@ -134,6 +134,19 @@ function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* ── PROMO ── */}
+      <div className="hp-promo-band">
+        <div className="container hp-promo-inner">
+          <span className="hp-promo-badge">Offre</span>
+          <p className="hp-promo-text">
+            <strong>50&nbsp;€ offerts</strong> pour tout apport d'or à partir de 30&nbsp;g
+          </p>
+          <Link to="/contact" className="btn btn-gold hp-promo-cta">
+            En profiter →
+          </Link>
+        </div>
+      </div>
 
       {/* ── PRODUITS ── */}
       <section className="section hp-products-section">

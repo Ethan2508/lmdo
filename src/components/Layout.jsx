@@ -9,8 +9,8 @@ const NAV_CATEGORIES = [
     label: "Métaux précieux",
     slugs: [
       "rachat-piece-or", "rachat-piece-argent", "rachat-lingot-or",
-      "rachat-lingot-argent", "rachat-bijoux-or", "rachat-or-dentaire",
-      "rachat-billet-collection"
+      "rachat-lingot-argent", "rachat-or-investissement", "rachat-bijoux-or",
+      "rachat-or-dentaire", "rachat-billet-collection"
     ]
   },
   {
@@ -104,6 +104,9 @@ function Layout() {
               <NavLink className={linkClass} to="/actualites" onClick={closeAll}>
                 Actualites
               </NavLink>
+              <NavLink className={linkClass} to="/kit-envoi" onClick={closeAll}>
+                Kit d'envoi
+              </NavLink>
               <NavLink className={linkClass} to="/contact" onClick={closeAll}>
                 Contact
               </NavLink>
@@ -155,6 +158,7 @@ function Layout() {
                 <h4>Navigation</h4>
                 <ul>
                   <li><NavLink to="/actualites" onClick={closeAll}>Actualites</NavLink></li>
+                  <li><NavLink to="/kit-envoi" onClick={closeAll}>Kit d'envoi</NavLink></li>
                   <li><NavLink to="/contact" onClick={closeAll}>Contact</NavLink></li>
                 </ul>
               </div>

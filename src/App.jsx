@@ -6,6 +6,7 @@ import ProductPage from "./pages/ProductPage";
 import ContactPage from "./pages/ContactPage";
 import ActualitesPage from "./pages/ActualitesPage";
 import MentionsLegalesPage from "./pages/MentionsLegalesPage";
+import KitEnvoiPage from "./pages/KitEnvoiPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import { productRoutes } from "./data/products";
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/rachat-sacs-luxe" element={<Navigate to="/rachat-maroquinerie-luxe" replace />} />
         <Route path="/rachat-monnaie" element={<Navigate to="/rachat-piece-argent" replace />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/kit-envoi" element={<KitEnvoiPage />} />
         <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>

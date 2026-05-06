@@ -243,6 +243,28 @@ export const productCatalog = [
       { q: "Le packaging influence-t-il le prix ?", a: "Oui, la boite ou les accessoires peuvent renforcer la valeur finale." }
     ]
   },
+  // ── OR D'INVESTISSEMENT ─────────────────────────────────
+  {
+    slug: "rachat-or-investissement",
+    name: "Or d'investissement",
+    navLabel: "Or d'investissement",
+    seoTitle: "Rachat or d'investissement — Lyon",
+    seoDescription: "Rachat d'or d'investissement : lingots, lingotins et pieces d'or et d'argent boursables, exoneres de TVA, evalues au cours du jour.",
+    eyebrow: "Rachat or d'investissement",
+    heading: "Vendez votre or d'investissement au prix du marche",
+    intro: "Nous rachetons les lingots, lingotins et pieces d'or et d'argent d'investissement (Napoleon, Krugerrand, Maple Leaf, American Eagle…) a un prix indexe sur le fixing officiel, sans TVA.",
+    highlights: ["Lingots et lingotins certifies LBMA", "Pieces boursables or et argent", "Exoneration de TVA garantie"],
+    whyItems: [
+      { title: "Exoneres de TVA", text: "L'or et l'argent d'investissement beneficient d'une exoneration de TVA en France et dans l'UE, ce qui maximise votre prix net." },
+      { title: "Cours officiel applique", text: "Offre indexee sur le fixing London Bullion Market Association (LBMA) du moment de la transaction." },
+      { title: "Verification sur place", text: "Titre, poids et authenticite verifies avec nos equipements avant toute proposition." }
+    ],
+    faq: [
+      { q: "Qu'est-ce que l'or d'investissement ?", a: "Ce sont des lingots (purete >= 995/1000), lingotins et pieces frappees apres 1800 (purete >= 900/1000) reconnues comme boursables — Krugerrand, Napoleon, Maple Leaf, American Eagle…" },
+      { q: "Rachetez-vous sans certificat ?", a: "Oui, sous reserve de verification de l'authenticite et du titre sur place." },
+      { q: "Quelle difference avec un bijou en or ?", a: "Un bijou incorpore une prime de fabrication ; l'or d'investissement est evalue uniquement sur son poids de metal pur, ce qui donne un prix plus proche du cours brut." }
+    ]
+  },
   // ── PIERRES PRECIEUSES ────────────────────────────────────
   {
     slug: "rachat-pierre-precieuse",
