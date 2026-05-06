@@ -275,16 +275,17 @@ function HomePage() {
       {/* ── VENTE BOUTIQUE ── */}
       <section className="section hp-vente-section">
         <div className="container">
-          <div className="hp-section-head">
-            <div>
-              <p className="eyebrow hp-vente-eyebrow">Notre boutique — Nous vendons</p>
-              <h2>L'or et l'argent d'investissement physique</h2>
-              <p className="hp-vente-lead">
-                Au-delà du rachat, La Maison de l'Or vous propose à la vente une gamme
-                de produits d'investissement&nbsp;: lingots, lingotins et pièces d'or et d'argent
-                certifiés, au cours officiel du marché.
-              </p>
-            </div>
+          <div className="hp-vente-headline">
+            <span className="hp-vente-eyebrow-badge">Notre boutique</span>
+            <h2 className="hp-vente-title">
+              <span className="hp-vente-title-accent">Nous vendons</span><br />
+              de l'or &amp; de l'argent d'investissement
+            </h2>
+            <p className="hp-vente-lead">
+              Au-delà du rachat, La Maison de l'Or vous propose une gamme complète de produits
+              d'investissement&nbsp;: <strong>lingots, lingotins et pièces certifiés</strong> en or
+              et en argent, au cours officiel du marché et en toute sécurité.
+            </p>
           </div>
 
           <div className="hp-vente-grid">
@@ -307,22 +308,39 @@ function HomePage() {
           <div className="hp-vente-pillars">
             <article className="hp-vente-pillar">
               <span className="hp-vente-pillar-icon" aria-hidden="true">🛡️</span>
-              <h3>L'or physique, valeur refuge par excellence</h3>
+              <h3>L'or, valeur refuge par excellence</h3>
               <p>
-                Sa rareté et sa résistance à l'inflation en font un investissement stable, surtout
-                en période d'incertitude économique. Le métal jaune conserve une valeur intrinsèque
-                indépendante des marchés financiers et reste hautement liquide&nbsp;: les lingots
-                et pièces d'or sont vendables partout dans le monde.
+                Rare, résistant à l'inflation et indépendant des marchés financiers, l'or physique
+                protège votre patrimoine en période d'incertitude. Hautement liquide, il se revend
+                partout dans le monde et reste un investissement stable sur le long terme.
               </p>
             </article>
             <article className="hp-vente-pillar">
               <span className="hp-vente-pillar-icon" aria-hidden="true">📈</span>
-              <h3>L'argent physique, un placement attractif</h3>
+              <h3>L'argent, un placement attractif</h3>
               <p>
-                Plus accessible que l'or, l'argent physique offre des avantages similaires en
-                termes de protection du patrimoine. En tant que valeur tangible et liquide, sous
-                forme de pièces ou de lingots, il constitue une alternative idéale pour diversifier
-                son épargne sur le long terme.
+                Plus accessible que l'or, l'argent physique offre les mêmes avantages de
+                protection du patrimoine. Tangible, liquide et fiscalement avantageux, il constitue
+                la solution idéale pour diversifier son épargne et démarrer un investissement
+                concret.
+              </p>
+            </article>
+            <article className="hp-vente-pillar">
+              <span className="hp-vente-pillar-icon" aria-hidden="true">💼</span>
+              <h3>Diversifier &amp; transmettre</h3>
+              <p>
+                Pièces de prestige (Napoléon, Krugerrand, 50 Pesos, 20 Dollars US…), lingots et
+                lingotins constituent un patrimoine tangible, transmissible et déconnecté du
+                système bancaire. Un actif pour préparer l'avenir.
+              </p>
+            </article>
+            <article className="hp-vente-pillar">
+              <span className="hp-vente-pillar-icon" aria-hidden="true">🔐</span>
+              <h3>Sécurité &amp; sérénité</h3>
+              <p>
+                Vos achats sont conditionnés sous sachets scellés et numérotés pour préserver leur
+                qualité et faciliter une revente future. Retrait en boutique ou livraison
+                sécurisée&nbsp;: vous gardez la main sur chaque étape.
               </p>
             </article>
           </div>
