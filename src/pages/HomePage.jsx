@@ -136,17 +136,29 @@ function HomePage() {
       </section>
 
       {/* ── PROMO ── */}
-      <div className="hp-promo-band">
-        <div className="container hp-promo-inner">
-          <span className="hp-promo-badge">Offre</span>
-          <p className="hp-promo-text">
-            <strong>50&nbsp;€ offerts</strong> pour tout apport d'or à partir de 30&nbsp;g
-          </p>
-          <Link to="/contact" className="btn btn-gold hp-promo-cta">
-            En profiter →
-          </Link>
+      <section className="hp-promo-section">
+        <div className="container">
+          <div className="hp-promo-card">
+            <div className="hp-promo-medal" aria-hidden="true">
+              <span className="hp-promo-medal-amount">50€</span>
+              <span className="hp-promo-medal-label">offerts</span>
+            </div>
+            <div className="hp-promo-content">
+              <span className="hp-promo-tag">Offre exclusive</span>
+              <h3 className="hp-promo-title">
+                <strong>50&nbsp;€ offerts</strong> dès 30&nbsp;g d'or apportés
+              </h3>
+              <p className="hp-promo-desc">
+                Profitez d'un bonus immédiat ajouté à votre estimation pour tout apport d'or à
+                partir de 30 grammes. Offre valable en boutique sur présentation de cette page.
+              </p>
+            </div>
+            <Link to="/contact" className="btn btn-gold hp-promo-action">
+              Prendre rendez-vous
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* ── PRODUITS ── */}
       <section className="section hp-products-section">
