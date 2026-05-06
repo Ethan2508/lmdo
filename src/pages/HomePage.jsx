@@ -240,7 +240,7 @@ function HomePage() {
               maroquinerie de luxe et pierres précieuses.
             </p>
             <p>
-              Notre approche n'a pas changé en quatre ans : transparence totale, respect du client,
+              Notre approche n'a pas changé en cinq ans : transparence totale, respect du client,
               expertise sérieuse. Juste une offre claire, au juste prix.
             </p>
             <Link className="btn btn-gold" to="/contact" style={{marginTop: "1.2rem", display: "inline-block"}}>
