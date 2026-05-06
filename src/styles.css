@@ -1966,15 +1966,41 @@ textarea:focus-visible {
 
 .kit-laposte {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
-.kit-laposte-logo {
-  height: 56px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
-  margin: 0 auto;
-  display: block;
+.kit-laposte-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  background: #f5c400;
+  border-radius: 16px;
+  padding: 1rem 2rem;
+}
+
+.kit-laposte-icon {
+  font-size: 2rem;
+  color: #003189;
+  line-height: 1;
+}
+
+.kit-laposte-label {
+  font-family: "Fraunces", serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #003189;
+  letter-spacing: 0.06em;
+}
+
+.kit-laposte-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #003189;
+  opacity: 0.75;
 }
 
 /* Avantages */

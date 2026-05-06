@@ -56,12 +56,11 @@ export default function KitEnvoiPage() {
             avec suivi de parcours, transporté en coffres jusqu'au destinataire.
           </p>
           <div className="kit-laposte">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/La_Poste_logo_2022.svg/640px-La_Poste_logo_2022.svg.png"
-              alt="La Poste"
-              className="kit-laposte-logo"
-              loading="lazy"
-            />
+            <div className="kit-laposte-badge">
+              <span className="kit-laposte-icon">✉</span>
+              <span className="kit-laposte-label">LA POSTE</span>
+              <span className="kit-laposte-sub">Valeur Déclarée</span>
+            </div>
           </div>
         </div>
       </section>
