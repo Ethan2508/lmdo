@@ -14,6 +14,45 @@ const STATS = [
   { value: "Lyon", label: "Au cœur du Rhône" },
 ];
 
+const VENTE_ITEMS = [
+  {
+    title: "Lingot d'or",
+    text: "Lingots d'or fin certifiés LBMA, du 100 g au kilo.",
+    icon: "🟧",
+    metal: "or",
+  },
+  {
+    title: "Lingotin d'or",
+    text: "Petits formats accessibles — 1 g, 5 g, 10 g, 20 g, 50 g.",
+    icon: "🔸",
+    metal: "or",
+  },
+  {
+    title: "Pièce d'or",
+    text: "Napoléon, Krugerrand, Maple Leaf, Souverain, 50 Pesos…",
+    icon: "🪙",
+    metal: "or",
+  },
+  {
+    title: "Lingot d'argent",
+    text: "Lingots d'argent .999 certifiés, plusieurs grammages.",
+    icon: "◾",
+    metal: "argent",
+  },
+  {
+    title: "Lingotin d'argent",
+    text: "Petits lingotins d'argent pour démarrer une collection.",
+    icon: "▪️",
+    metal: "argent",
+  },
+  {
+    title: "Pièce d'argent",
+    text: "Pièces d'argent boursables et de collection.",
+    icon: "🥈",
+    metal: "argent",
+  },
+];
+
 const TRUSTS = [
   {
     icon: "⚖️",
@@ -160,12 +199,12 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ── PRODUITS ── */}
+      {/* ── PRODUITS RACHAT ── */}
       <section className="section hp-products-section">
         <div className="container">
           <div className="hp-section-head">
             <div>
-              <p className="eyebrow">Ce que nous rachetons</p>
+              <p className="eyebrow">Service de rachat — Nous achetons</p>
               <h2>Tous vos biens de valeur expertisés</h2>
             </div>
             <Link to="/contact" className="btn btn-line">
@@ -199,6 +238,68 @@ function HomePage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── VENTE BOUTIQUE ── */}
+      <section className="section hp-vente-section">
+        <div className="container">
+          <div className="hp-section-head">
+            <div>
+              <p className="eyebrow hp-vente-eyebrow">Notre boutique — Nous vendons</p>
+              <h2>L'or et l'argent d'investissement physique</h2>
+              <p className="hp-vente-lead">
+                Au-delà du rachat, La Maison de l'Or vous propose à la vente une gamme
+                de produits d'investissement&nbsp;: lingots, lingotins et pièces d'or et d'argent
+                certifiés, au cours officiel du marché.
+              </p>
+            </div>
+          </div>
+
+          <div className="hp-vente-grid">
+            {VENTE_ITEMS.map((v) => (
+              <div key={v.title} className={`hp-vente-card hp-vente-card--${v.metal}`}>
+                <span className="hp-vente-icon" aria-hidden="true">{v.icon}</span>
+                <div className="hp-vente-body">
+                  <span className={`hp-vente-tag hp-vente-tag--${v.metal}`}>
+                    {v.metal === "or" ? "Or fin" : "Argent .999"}
+                  </span>
+                  <h3>{v.title}</h3>
+                  <p>{v.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="hp-vente-pillars">
+            <article className="hp-vente-pillar">
+              <span className="hp-vente-pillar-icon" aria-hidden="true">🛡️</span>
+              <h3>L'or physique, valeur refuge par excellence</h3>
+              <p>
+                Sa rareté et sa résistance à l'inflation en font un investissement stable, surtout
+                en période d'incertitude économique. Le métal jaune conserve une valeur intrinsèque
+                indépendante des marchés financiers et reste hautement liquide&nbsp;: les lingots
+                et pièces d'or sont vendables partout dans le monde.
+              </p>
+            </article>
+            <article className="hp-vente-pillar">
+              <span className="hp-vente-pillar-icon" aria-hidden="true">📈</span>
+              <h3>L'argent physique, un placement attractif</h3>
+              <p>
+                Plus accessible que l'or, l'argent physique offre des avantages similaires en
+                termes de protection du patrimoine. En tant que valeur tangible et liquide, sous
+                forme de pièces ou de lingots, il constitue une alternative idéale pour diversifier
+                son épargne sur le long terme.
+              </p>
+            </article>
+          </div>
+
+          <div className="hp-vente-cta">
+            <p>Intéressé par l'achat de métaux précieux&nbsp;?</p>
+            <Link to="/contact" className="btn btn-gold">
+              Nous contacter pour acheter →
+            </Link>
           </div>
         </div>
       </section>
