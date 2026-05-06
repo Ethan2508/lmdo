@@ -177,23 +177,53 @@ function HomePage() {
       {/* ── PROMO ── */}
       <section className="hp-promo-section">
         <div className="container">
-          <div className="hp-promo-card">
-            <div className="hp-promo-medal" aria-hidden="true">
-              <span className="hp-promo-medal-amount">50€</span>
-              <span className="hp-promo-medal-label">offerts</span>
-            </div>
-            <div className="hp-promo-content">
-              <span className="hp-promo-tag">Offre exclusive</span>
-              <h3 className="hp-promo-title">
-                <strong>50&nbsp;€ offerts</strong> dès 30&nbsp;g d'or apportés
-              </h3>
-              <p className="hp-promo-desc">
-                Profitez d'un bonus immédiat ajouté à votre estimation pour tout apport d'or à
-                partir de 30 grammes. Offre valable en boutique sur présentation de cette page.
+          <div className="hp-promo-header">
+            <span className="hp-promo-tag">Offre exclusive</span>
+            <h2 className="hp-promo-heading">
+              Jusqu'à <strong>300&nbsp;€ offerts</strong> sur votre rachat d'or
+            </h2>
+            <p className="hp-promo-subheading">
+              Plus vous apportez d'or 18 carats, plus votre bonus est important.
+              Offre cumulable avec le cours du jour, valable en boutique.
+            </p>
+          </div>
+
+          <div className="hp-promo-tiers">
+            <div className="hp-promo-tier">
+              <div className="hp-promo-tier-medal" aria-hidden="true">
+                <span className="hp-promo-tier-amount">100€</span>
+                <span className="hp-promo-tier-label">offerts</span>
+              </div>
+              <p className="hp-promo-tier-cond">
+                pour une transaction d'<strong>au moins 50&nbsp;g</strong> d'or 18&nbsp;carats
               </p>
             </div>
-            <Link to="/contact" className="btn btn-gold hp-promo-action">
-              Prendre rendez-vous
+
+            <div className="hp-promo-tier hp-promo-tier--featured">
+              <span className="hp-promo-tier-badge">Le plus choisi</span>
+              <div className="hp-promo-tier-medal" aria-hidden="true">
+                <span className="hp-promo-tier-amount">200€</span>
+                <span className="hp-promo-tier-label">offerts</span>
+              </div>
+              <p className="hp-promo-tier-cond">
+                pour une transaction d'<strong>au moins 80&nbsp;g</strong> d'or 18&nbsp;carats
+              </p>
+            </div>
+
+            <div className="hp-promo-tier">
+              <div className="hp-promo-tier-medal" aria-hidden="true">
+                <span className="hp-promo-tier-amount">300€</span>
+                <span className="hp-promo-tier-label">offerts</span>
+              </div>
+              <p className="hp-promo-tier-cond">
+                pour une transaction d'<strong>au moins 100&nbsp;g</strong> d'or 18&nbsp;carats
+              </p>
+            </div>
+          </div>
+
+          <div className="hp-promo-footer">
+            <Link to="/contact" className="btn btn-gold">
+              Prendre rendez-vous →
             </Link>
           </div>
         </div>
