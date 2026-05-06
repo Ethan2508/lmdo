@@ -24,7 +24,7 @@ const VENTE_ITEMS = [
   {
     title: "Lingotin d'or",
     text: "Petits formats accessibles — 1 g, 5 g, 10 g, 20 g, 50 g.",
-    image: "/lingot-or.png",
+    image: "/lingotin-or.png",
     metal: "or",
   },
   {
@@ -42,7 +42,7 @@ const VENTE_ITEMS = [
   {
     title: "Lingotin d'argent",
     text: "Petits lingotins d'argent pour démarrer une collection.",
-    image: "/lingot-argent.png",
+    image: "/lingotin-argent.webp",
     metal: "argent",
   },
   {
