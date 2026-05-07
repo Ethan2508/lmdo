@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Seo from "../components/Seo";
 import { siteConfig } from "../data/site";
 
@@ -35,6 +35,44 @@ export default function KitEnvoiPage() {
   const [sending, setSending] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
+  // ── Autocomplétion adresse (Base Adresse Nationale, gratuit, sans clé) ──
+  const [adresse, setAdresse] = useState("");
+  const [codePostal, setCodePostal] = useState("");
+  const [ville, setVille] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSugg, setShowSugg] = useState(false);
+  const debounceRef = useRef(null);
+
+  useEffect(() => {
+    if (!adresse || adresse.length < 3) {
+      setSuggestions([]);
+      return;
+    }
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(async () => {
+      try {
+        const url = `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(
+          adresse
+        )}&limit=6&autocomplete=1`;
+        const r = await fetch(url);
+        const j = await r.json();
+        setSuggestions(j.features || []);
+      } catch {
+        setSuggestions([]);
+      }
+    }, 220);
+    return () => clearTimeout(debounceRef.current);
+  }, [adresse]);
+
+  function pickSuggestion(feat) {
+    const p = feat.properties || {};
+    setAdresse(p.name || "");
+    setCodePostal(p.postcode || "");
+    setVille(p.city || "");
+    setSuggestions([]);
+    setShowSugg(false);
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
     if (sending) return;
@@ -62,11 +100,12 @@ export default function KitEnvoiPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!r.ok) throw new Error("send failed");
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.detail || j.error || "send failed");
       setSent(true);
     } catch (err) {
       setErrorMsg(
-        "L'envoi a échoué. Merci de réessayer ou de nous contacter directement par téléphone."
+        `L'envoi a échoué : ${err.message}. Merci de réessayer ou de nous contacter directement par téléphone.`
       );
     } finally {
       setSending(false);
@@ -186,16 +225,63 @@ export default function KitEnvoiPage() {
               <input id="k-tel" name="telephone" type="tel" placeholder="06 00 00 00 00" />
 
               <label htmlFor="k-adresse">Adresse de livraison *</label>
-              <input id="k-adresse" name="adresse" required placeholder="Numéro et nom de rue" />
+              <div className="kit-autocomplete">
+                <input
+                  id="k-adresse"
+                  name="adresse"
+                  required
+                  placeholder="Commencez à taper votre adresse…"
+                  value={adresse}
+                  onChange={(e) => {
+                    setAdresse(e.target.value);
+                    setShowSugg(true);
+                  }}
+                  onFocus={() => setShowSugg(true)}
+                  onBlur={() => setTimeout(() => setShowSugg(false), 150)}
+                  autoComplete="off"
+                />
+                {showSugg && suggestions.length > 0 && (
+                  <ul className="kit-autocomplete-list">
+                    {suggestions.map((f) => (
+                      <li
+                        key={f.properties.id}
+                        onMouseDown={(e) => {
+                          e.preventDefault();
+                          pickSuggestion(f);
+                        }}
+                      >
+                        <strong>{f.properties.name}</strong>
+                        <span>
+                          {f.properties.postcode} {f.properties.city}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
 
               <div className="kit-form-row">
                 <div>
                   <label htmlFor="k-cp">Code postal *</label>
-                  <input id="k-cp" name="codePostal" required placeholder="69000" />
+                  <input
+                    id="k-cp"
+                    name="codePostal"
+                    required
+                    placeholder="69000"
+                    value={codePostal}
+                    onChange={(e) => setCodePostal(e.target.value)}
+                  />
                 </div>
                 <div>
                   <label htmlFor="k-ville">Ville *</label>
-                  <input id="k-ville" name="ville" required placeholder="Lyon" />
+                  <input
+                    id="k-ville"
+                    name="ville"
+                    required
+                    placeholder="Lyon"
+                    value={ville}
+                    onChange={(e) => setVille(e.target.value)}
+                  />
                 </div>
               </div>
 

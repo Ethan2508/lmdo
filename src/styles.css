@@ -2972,3 +2972,53 @@ textarea:focus-visible {
     padding: 3.5rem 0 4rem;
   }
 }
+
+/* ── Autocomplétion adresse (kit envoi) ── */
+.kit-autocomplete {
+  position: relative;
+}
+
+.kit-autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #e5e0d4;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 50;
+}
+
+.kit-autocomplete-list li {
+  padding: 0.65rem 0.9rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 1px solid #f3efe3;
+  font-size: 0.92rem;
+}
+
+.kit-autocomplete-list li:last-child {
+  border-bottom: none;
+}
+
+.kit-autocomplete-list li:hover {
+  background: #faf6ee;
+}
+
+.kit-autocomplete-list li strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.kit-autocomplete-list li span {
+  color: #6b6258;
+  font-size: 0.82rem;
+}

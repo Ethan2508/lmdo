@@ -50,6 +50,12 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Champs requis manquants" });
     }
 
+    if (!process.env.RESEND_API_KEY) {
+      return res
+        .status(500)
+        .json({ error: "RESEND_API_KEY manquante côté serveur" });
+    }
+
     const isKit = type === "kit-envoi";
     const subject = isKit
       ? `Demande de kit d'envoi — ${nom}`
@@ -99,7 +105,7 @@ export default async function handler(req, res) {
       </div>
     `;
 
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: MAIL_FROM,
       to: MAIL_TO,
       replyTo: email,
@@ -109,12 +115,17 @@ export default async function handler(req, res) {
 
     if (error) {
       console.error("Resend error:", error);
-      return res.status(500).json({ error: "Envoi impossible" });
+      return res.status(500).json({
+        error: "Envoi impossible",
+        detail: error.message || error.name || JSON.stringify(error),
+      });
     }
 
-    return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true, id: data?.id });
   } catch (e) {
     console.error("contact handler error:", e);
-    return res.status(500).json({ error: "Erreur serveur" });
+    return res
+      .status(500)
+      .json({ error: "Erreur serveur", detail: e?.message || String(e) });
   }
 }
