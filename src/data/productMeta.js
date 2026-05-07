@@ -2,43 +2,43 @@
 export const productMeta = {
   "rachat-piece-or": {
     icon: "🪙",
-    image: "/piece-or.png",
+    image: "/piece-or.webp",
     priceKey: "or",
     shortText: "Pieces boursables et de collection evaluees au cours du jour."
   },
   "rachat-piece-argent": {
     icon: "🥈",
-    image: "/piece-argent.png",
+    image: "/piece-argent.webp",
     priceKey: "argent",
     shortText: "Pieces argent anciennes et modernes, estimation transparente."
   },
   "rachat-lingot-or": {
     icon: "🔶",
-    image: "/lingot-or.png",
+    image: "/lingot-or.webp",
     priceKey: "or",
     shortText: "Lingots et lingotines en or, verification du titre sur place."
   },
   "rachat-lingot-argent": {
     icon: "▪️",
-    image: "/lingot-argent.png",
+    image: "/lingot-argent.webp",
     priceKey: "argent",
     shortText: "Lingots et barres d'argent evalues au cours spot du jour."
   },
   "rachat-bijoux-or": {
     icon: "💍",
-    image: "/bijoux-or.jpg",
+    image: "/bijoux-or.webp",
     priceKey: "or",
     shortText: "Bagues, chaines, bracelets et colliers en or, meme casses."
   },
   "rachat-or-dentaire": {
     icon: "🦷",
-    image: "/or-dentaire.jpg",
+    image: "/or-dentaire.webp",
     priceKey: "or",
     shortText: "Couronnes et bridges en or rachetes apres analyse du titre."
   },
   "rachat-billet-collection": {
     icon: "🎴",
-    image: "/billet-collection.jpg",
+    image: "/billet-collection.webp",
     priceKey: null,
     shortText: "Billets rares et anciens estimes selon leur rarete et etat."
   },
@@ -62,7 +62,7 @@ export const productMeta = {
   },
   "rachat-maroquinerie-luxe": {
     icon: "👜",
-    image: "/sac-luxe.jpg",
+    image: "/sac-luxe.webp",
     priceKey: null,
     shortText: "Sacs, portefeuilles et maroquinerie de grandes maisons."
   },
@@ -74,7 +74,7 @@ export const productMeta = {
   },
   "rachat-or-investissement": {
     icon: "📊",
-    image: "/pieces-or-argent.jpg",
+    image: "/pieces-or-argent.webp",
     priceKey: "or",
     shortText: "Lingots, lingotins et pieces boursables exoneres de TVA, cours LBMA."
   },

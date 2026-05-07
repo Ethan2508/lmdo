@@ -18,25 +18,25 @@ const VENTE_ITEMS = [
   {
     title: "Lingot d'or",
     text: "Lingots d'or fin certifiés LBMA, du 100 g au kilo.",
-    image: "/lingot-or.png",
+    image: "/lingot-or.webp",
     metal: "or",
   },
   {
     title: "Lingotin d'or",
     text: "Petits formats accessibles — 1 g, 5 g, 10 g, 20 g, 50 g.",
-    image: "/lingotin-or.png",
+    image: "/lingotin-or.webp",
     metal: "or",
   },
   {
     title: "Pièce d'or",
     text: "Napoléon, Krugerrand, Maple Leaf, Souverain, 50 Pesos…",
-    image: "/piece-or.png",
+    image: "/piece-or.webp",
     metal: "or",
   },
   {
     title: "Lingot d'argent",
     text: "Lingots d'argent .999 certifiés, plusieurs grammages.",
-    image: "/lingot-argent.png",
+    image: "/lingot-argent.webp",
     metal: "argent",
   },
   {
@@ -48,7 +48,7 @@ const VENTE_ITEMS = [
   {
     title: "Pièce d'argent",
     text: "Pièces d'argent boursables et de collection.",
-    image: "/piece-argent.png",
+    image: "/piece-argent.webp",
     metal: "argent",
   },
 ];

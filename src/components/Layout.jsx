@@ -49,7 +49,7 @@ function Layout() {
         <div className="nav-bar">
           <div className="container nav-shell">
             <NavLink className="brand-logo" to="/" aria-label="Accueil La Maison de l'Or" onClick={closeAll}>
-              <img src="/logo-lmdo-noir.png" alt="Logo La Maison de l'Or" />
+              <img src="/logo-lmdo-noir.webp" alt="Logo La Maison de l'Or" width="180" height="60" decoding="async" fetchpriority="high" />
             </NavLink>
 
             <nav
@@ -138,7 +138,7 @@ function Layout() {
         <div className="container">
           <div className="footer-top">
             <NavLink to="/" aria-label="Accueil" onClick={closeAll}>
-              <img className="footer-logo" src="/logo-lmdo-noir.png" alt="Logo La Maison de l'Or" />
+              <img className="footer-logo" src="/logo-lmdo-noir.webp" alt="Logo La Maison de l'Or" width="160" height="54" loading="lazy" decoding="async" />
             </NavLink>
 
             <div className="footer-cols">

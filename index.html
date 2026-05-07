@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#15120b" />
+
+    <!-- Performance: preload critical assets -->
+    <link rel="preload" as="image" href="/hero.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/logo-lmdo-noir.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api-adresse.data.gouv.fr" />
+
     <title>La Maison de l'Or</title>
   </head>
   <body>
