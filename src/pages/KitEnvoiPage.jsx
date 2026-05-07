@@ -32,10 +32,45 @@ const STEPS = [
 
 export default function KitEnvoiPage() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSent(true);
+    if (sending) return;
+    setSending(true);
+    setErrorMsg("");
+
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      type: "kit-envoi",
+      nom: fd.get("nom"),
+      email: fd.get("email"),
+      telephone: fd.get("telephone"),
+      adresse: fd.get("adresse"),
+      codePostal: fd.get("codePostal"),
+      ville: fd.get("ville"),
+      objetType: fd.get("objetType"),
+      poids: fd.get("poids"),
+      message: fd.get("message"),
+      website: fd.get("website"), // honeypot
+    };
+
+    try {
+      const r = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!r.ok) throw new Error("send failed");
+      setSent(true);
+    } catch (err) {
+      setErrorMsg(
+        "L'envoi a échoué. Merci de réessayer ou de nous contacter directement par téléphone."
+      );
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -132,6 +167,15 @@ export default function KitEnvoiPage() {
             </div>
           ) : (
             <form className="kit-form contact-form" onSubmit={handleSubmit}>
+              {/* Honeypot anti-bot — caché aux humains */}
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+                aria-hidden="true"
+              />
               <label htmlFor="k-nom">Nom complet *</label>
               <input id="k-nom" name="nom" required placeholder="Votre nom et prénom" />
 
@@ -178,9 +222,14 @@ export default function KitEnvoiPage() {
                 placeholder="Décrivez brièvement vos objets…"
               />
 
-              <button className="btn btn-gold" type="submit">
-                Recevoir mon kit gratuitement →
+              <button className="btn btn-gold" type="submit" disabled={sending}>
+                {sending ? "Envoi en cours…" : "Recevoir mon kit gratuitement →"}
               </button>
+              {errorMsg && (
+                <p style={{ color: "#c0392b", marginTop: "0.8rem", fontWeight: 600 }}>
+                  {errorMsg}
+                </p>
+              )}
             </form>
           )}
         </div>
