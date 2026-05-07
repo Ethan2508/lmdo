@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap");
+/* Google Fonts chargé via <link> dans index.html (non-blocking) */
 
 :root {
   --bg: #f8f4ec;
@@ -305,9 +305,15 @@ a {
 .hp-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('/hero.webp');
+  background-image: url('/hero-mobile.webp');
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 768px) {
+  .hp-hero-bg {
+    background-image: url('/hero.webp');
+  }
 }
 
 .hp-hero-overlay {
