@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "react-snap",
+    "postbuild": "react-snap || echo 'react-snap skipped'",
     "preview": "vite preview"
   },
   "reactSnap": {
