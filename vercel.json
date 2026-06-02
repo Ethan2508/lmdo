@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "lamaisondelor.shop" }],
+      "destination": "https://www.lamaisondelor.shop/$1",
+      "permanent": true
+    },
+    { "source": "/rachat-bijoux",   "destination": "/rachat-bijoux-or",           "permanent": true },
+    { "source": "/rachat-or",       "destination": "/rachat-lingot-or",            "permanent": true },
+    { "source": "/rachat-menagere", "destination": "/rachat-argenterie",           "permanent": true },
+    { "source": "/rachat-sacs-luxe","destination": "/rachat-maroquinerie-luxe",    "permanent": true },
+    { "source": "/rachat-monnaie",  "destination": "/rachat-piece-argent",         "permanent": true }
+  ],
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }

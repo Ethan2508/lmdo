@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import { productRoutes } from "./data/products";
@@ -32,11 +32,6 @@ function App() {
                     element={<ProductPage product={product} />}
                   />
                 ))}
-                <Route path="/rachat-bijoux" element={<Navigate to="/rachat-bijoux-or" replace />} />
-                <Route path="/rachat-or" element={<Navigate to="/rachat-lingot-or" replace />} />
-                <Route path="/rachat-menagere" element={<Navigate to="/rachat-argenterie" replace />} />
-                <Route path="/rachat-sacs-luxe" element={<Navigate to="/rachat-maroquinerie-luxe" replace />} />
-                <Route path="/rachat-monnaie" element={<Navigate to="/rachat-piece-argent" replace />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/kit-envoi" element={<KitEnvoiPage />} />
                 <Route path="/mentions-legales" element={<MentionsLegalesPage />} />

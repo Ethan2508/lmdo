@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "La Maison de l'Or",
-  domain: "https://www.lamaisondelor.fr",
+  domain: "https://www.lamaisondelor.shop",
   phone: "06 18 75 35 52",
   phoneHref: "tel:+33618753552",
   email: "contactreservations.lmdo@gmail.com",

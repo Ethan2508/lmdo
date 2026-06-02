@@ -1,10 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ── HOMEPAGE ── -->
   <url>
-    <loc>https://www.lamaisondelor.fr/</loc>
+    <loc>https://www.lamaisondelor.shop/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- ── PAGES PRINCIPALES ── -->
+  <url>
+    <loc>https://www.lamaisondelor.shop/produits</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/kit-envoi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/actualites</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/mentions-legales</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ── MÉTAUX PRÉCIEUX ── -->
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-piece-or</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-piece-argent</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-lingot-or</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-lingot-argent</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-bijoux-or</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-or-dentaire</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-or-investissement</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── HORLOGERIE & LUXE ── -->
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-montres</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-maroquinerie-luxe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-foulards-luxe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── ARGENTERIE & OBJETS ── -->
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-argenterie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-objet-plaque-or</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-billet-collection</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lamaisondelor.shop/rachat-pierre-precieuse</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
   <url>
     <loc>https://www.lamaisondelor.fr/rachat-piece-or</loc>
     <changefreq>weekly</changefreq>
