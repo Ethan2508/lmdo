@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Seo from "../components/Seo";
 import { siteConfig } from "../data/site";
+import { getLeadSource, trackFormSuccess } from "../lib/leadSource";
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -21,6 +22,7 @@ function ContactPage() {
       objetType: fd.get("assetType"),
       message: fd.get("message"),
       website: fd.get("website"),
+      lead_source: getLeadSource(),
     };
 
     try {
@@ -30,7 +32,10 @@ function ContactPage() {
         body: JSON.stringify(payload),
       });
       if (!r.ok) throw new Error("send failed");
+      const j = await r.json().catch(() => ({}));
       setSent(true);
+      // Pas de source dans la réponse (honeypot) : pas de conversion.
+      if (j.source) trackFormSuccess(j.source);
     } catch (err) {
       setErrorMsg("L'envoi a échoué. Merci de réessayer ou de nous appeler directement.");
     } finally {
@@ -111,7 +116,7 @@ function ContactPage() {
               placeholder="Exemple: 2 bagues or 18k, 1 montre Rolex, 5 pièces Napoléon"
             />
 
-            <button className="btn btn-gold" type="submit" disabled={sending}>
+            <button className="btn btn-gold" type="submit" disabled={sending || sent}>
               {sending ? "Envoi en cours…" : "Envoyer ma demande"}
             </button>
 

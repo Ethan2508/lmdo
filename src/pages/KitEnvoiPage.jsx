@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Seo from "../components/Seo";
+import { getLeadSource, trackFormSuccess } from "../lib/leadSource";
 import { siteConfig } from "../data/site";
 
 const STEPS = [
@@ -92,6 +93,7 @@ export default function KitEnvoiPage() {
       poids: fd.get("poids"),
       message: fd.get("message"),
       website: fd.get("website"), // honeypot
+      lead_source: getLeadSource(),
     };
 
     try {
@@ -103,6 +105,8 @@ export default function KitEnvoiPage() {
       const j = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(j.detail || j.error || "send failed");
       setSent(true);
+      // Pas de source dans la réponse (honeypot) : pas de conversion.
+      if (j.source) trackFormSuccess(j.source);
     } catch (err) {
       setErrorMsg(
         `L'envoi a échoué : ${err.message}. Merci de réessayer ou de nous contacter directement par téléphone.`
@@ -308,7 +312,7 @@ export default function KitEnvoiPage() {
                 placeholder="Décrivez brièvement vos objets…"
               />
 
-              <button className="btn btn-gold" type="submit" disabled={sending}>
+              <button className="btn btn-gold" type="submit" disabled={sending || sent}>
                 {sending ? "Envoi en cours…" : "Recevoir mon kit gratuitement →"}
               </button>
               {errorMsg && (

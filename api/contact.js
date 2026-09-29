@@ -2,6 +2,7 @@
 // Reçoit les soumissions de formulaire et envoie un mail via Resend.
 
 import { Resend } from "resend";
+import { classifyLeadSource, sanitizeLeadSource } from "./_leadSource.js";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -18,6 +19,33 @@ function esc(s = "") {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function formatVisitDate(iso) {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return iso;
+  return date.toLocaleString("fr-FR", { timeZone: "Europe/Paris" });
+}
+
+// Bloc discret en bas de mail : détail brut de la source.
+function sourceDetailsHtml(source) {
+  const gclid = source.gclid || source.gbraid || source.wbraid;
+  const details = [
+    ["Identifiant Google Ads", gclid && (gclid.length > 16 ? `${gclid.slice(0, 16)}…` : gclid)],
+    ["utm_source", source.utm_source],
+    ["utm_medium", source.utm_medium],
+    ["utm_campaign", source.utm_campaign],
+    ["utm_term", source.utm_term],
+    ["Référent", source.referrer],
+    ["Page d'arrivée", source.landing_page],
+    ["Date de première visite", source.timestamp && formatVisitDate(source.timestamp)],
+  ].filter(([, v]) => v);
+
+  if (details.length === 0) return "";
+  return `
+        <div style="margin-top:24px;padding-top:12px;border-top:1px solid #e5e5e5;color:#999;font-size:11px;line-height:1.6;">
+          ${details.map(([k, v]) => `${esc(k)} : ${esc(v)}`).join("<br />")}
+        </div>`;
 }
 
 export default async function handler(req, res) {
@@ -41,6 +69,9 @@ export default async function handler(req, res) {
       // honeypot anti-bot : si rempli, on ignore silencieusement
       website = "",
     } = body;
+    // Champs de suivi optionnels : jamais bloquants.
+    const leadSource = sanitizeLeadSource(body.lead_source);
+    const sourceLabel = classifyLeadSource(leadSource);
 
     if (website) {
       return res.status(200).json({ ok: true });
@@ -80,6 +111,9 @@ export default async function handler(req, res) {
 
     const html = `
       <div style="font-family:Arial,sans-serif;max-width:560px;margin:0 auto;padding:24px;background:#fafafa;border-radius:8px;">
+        <p style="margin:0 0 16px;padding:10px 14px;background:#fff7e6;border-left:4px solid #c9973d;font-size:15px;font-weight:700;color:#333;">
+          Source : ${esc(sourceLabel)}
+        </p>
         <h2 style="color:#af7e2f;border-bottom:2px solid #c9973d;padding-bottom:8px;">
           ${esc(subject)}
         </h2>
@@ -101,7 +135,7 @@ export default async function handler(req, res) {
         <p style="margin-top:24px;color:#666;font-size:12px;">
           Envoyé depuis le site La Maison de l'Or — répondez directement à ce mail
           pour contacter ${esc(nom)}.
-        </p>
+        </p>${sourceDetailsHtml(leadSource)}
       </div>
     `;
 
@@ -121,7 +155,7 @@ export default async function handler(req, res) {
       });
     }
 
-    return res.status(200).json({ ok: true, id: data?.id });
+    return res.status(200).json({ ok: true, id: data?.id, source: sourceLabel });
   } catch (e) {
     console.error("contact handler error:", e);
     return res

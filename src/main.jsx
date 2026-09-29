@@ -3,7 +3,10 @@ import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { PricesProvider } from "./context/PricesContext";
+import { captureLeadSource } from "./lib/leadSource";
 import "./styles.css";
+
+captureLeadSource();
 
 const rootElement = document.getElementById("root");
 const app = (
