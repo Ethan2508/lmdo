@@ -6,15 +6,15 @@ function NotFoundPage() {
     <section className="section">
       <Seo
         title="Page introuvable"
-        description="La page que vous recherchez n'existe pas ou a ete deplacee."
+        description="La page que vous recherchez n'existe pas ou a été déplacée."
         path="/404"
         noindex
       />
       <div className="container simple-center">
         <h1>Page introuvable</h1>
-        <p>La page demandee n'est pas disponible.</p>
+        <p>La page demandée n'est pas disponible.</p>
         <Link className="btn btn-gold" to="/">
-          Retour a l'accueil
+          Retour à l'accueil
         </Link>
       </div>
     </section>

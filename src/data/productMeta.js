@@ -4,61 +4,61 @@ export const productMeta = {
     icon: "🪙",
     image: "/piece-or.webp",
     priceKey: "or",
-    shortText: "Pieces boursables et de collection evaluees au cours du jour."
+    shortText: "Pièces boursables et de collection évaluées au cours du jour."
   },
   "rachat-piece-argent": {
     icon: "🥈",
     image: "/piece-argent.webp",
     priceKey: "argent",
-    shortText: "Pieces argent anciennes et modernes, estimation transparente."
+    shortText: "Pièces argent anciennes et modernes, estimation transparente."
   },
   "rachat-lingot-or": {
     icon: "🔶",
     image: "/lingot-or.webp",
     priceKey: "or",
-    shortText: "Lingots et lingotines en or, verification du titre sur place."
+    shortText: "Lingots et lingotines en or, vérification du titre sur place."
   },
   "rachat-lingot-argent": {
     icon: "▪️",
     image: "/lingot-argent.webp",
     priceKey: "argent",
-    shortText: "Lingots et barres d'argent evalues au cours spot du jour."
+    shortText: "Lingots et barres d'argent évalués au cours spot du jour."
   },
   "rachat-bijoux-or": {
     icon: "💍",
     image: "/bijoux-or.webp",
     priceKey: "or",
-    shortText: "Bagues, chaines, bracelets et colliers en or, meme casses."
+    shortText: "Bagues, chaînes, bracelets et colliers en or, même cassés."
   },
   "rachat-or-dentaire": {
     icon: "🦷",
     image: "/or-dentaire.webp",
     priceKey: "or",
-    shortText: "Couronnes et bridges en or rachetes apres analyse du titre."
+    shortText: "Couronnes et bridges en or rachetés après analyse du titre."
   },
   "rachat-billet-collection": {
     icon: "🎴",
     image: "/billet-collection.webp",
     priceKey: null,
-    shortText: "Billets rares et anciens estimes selon leur rarete et etat."
+    shortText: "Billets rares et anciens estimés selon leur rareté et état."
   },
   "rachat-montres": {
     icon: "⌚",
     image: "/montres-luxe.webp",
     priceKey: null,
-    shortText: "Montres de luxe et vintage, avec ou sans boite et papiers."
+    shortText: "Montres de luxe et vintage, avec ou sans boîte et papiers."
   },
   "rachat-argenterie": {
     icon: "🥄",
     image: "/argenterie.webp",
     priceKey: "argent",
-    shortText: "Menageres, couverts et argenterie ancienne evalues au poids."
+    shortText: "Ménagères, couverts et argenterie ancienne évalués au poids."
   },
   "rachat-objet-plaque-or": {
     icon: "✨",
     image: "/objet-plaque-or.jpg",
     priceKey: null,
-    shortText: "Couverts, cadres et objets plaques or, estimation honnete."
+    shortText: "Couverts, cadres et objets plaqués or, estimation honnête."
   },
   "rachat-maroquinerie-luxe": {
     icon: "👜",
@@ -76,12 +76,12 @@ export const productMeta = {
     icon: "📊",
     image: "/pieces-or-argent.webp",
     priceKey: "or",
-    shortText: "Lingots, lingotins et pieces boursables exoneres de TVA, cours LBMA."
+    shortText: "Lingots, lingotins et pièces boursables exonérés de TVA, cours LBMA."
   },
   "rachat-pierre-precieuse": {
     icon: "💎",
     image: "/pierre-precieuses.png",
     priceKey: null,
-    shortText: "Diamants, rubis, emeraudes et saphirs expertises selon les 4C."
+    shortText: "Diamants, rubis, émeraudes et saphirs expertisés selon les 4C."
   }
 };

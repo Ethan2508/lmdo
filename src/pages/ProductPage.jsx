@@ -93,15 +93,15 @@ function ProductPage({ product }) {
 
       <section className="section process-band">
         <div className="container">
-          <h2>Processus en 3 etapes</h2>
+          <h2>Processus en 3 étapes</h2>
           <ol className="steps-list">
             <li>
               <h3>1. Contact</h3>
-              <p>Vous nous decrivez votre produit et son etat general.</p>
+              <p>Vous nous décrivez votre produit et son état général.</p>
             </li>
             <li>
               <h3>2. Expertise</h3>
-              <p>Nous procedons a l'analyse technique et marchande en boutique.</p>
+              <p>Nous procédons à l'analyse technique et marchande en boutique.</p>
             </li>
             <li>
               <h3>3. Offre</h3>
@@ -113,7 +113,7 @@ function ProductPage({ product }) {
 
       <section className="section">
         <div className="container">
-          <h2>Questions frequentes</h2>
+          <h2>Questions fréquentes</h2>
           <div className="faq-grid">
             {product.faq.map((item) => (
               <details key={item.q}>
@@ -130,7 +130,7 @@ function ProductPage({ product }) {
           <div>
             <p className="eyebrow">Parcours premium</p>
             <h2>
-              Estimation de {product.name.toLowerCase()} a {siteConfig.city} et en {siteConfig.region}
+              Estimation de {product.name.toLowerCase()} à {siteConfig.city} et en {siteConfig.region}
             </h2>
           </div>
           <Link className="btn btn-gold" to="/contact">

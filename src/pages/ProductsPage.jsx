@@ -7,7 +7,7 @@ function ProductsPage() {
     <>
       <Seo
         title="Nos produits de rachat"
-        description="Decouvrez tous nos produits de rachat: piece or, piece argent, or, montre, menagere, sacs de luxe et foulards de luxe."
+        description="Découvrez tous nos produits de rachat: pièce or, pièce argent, or, montre, ménagère, sacs de luxe et foulards de luxe."
         path="/produits"
       />
 
@@ -17,8 +17,8 @@ function ProductsPage() {
           <p className="eyebrow">Catalogue</p>
           <h1>Chaque produit a sa page d'expertise</h1>
           <p className="lead-text">
-            Choisissez la categorie qui correspond a votre besoin pour acceder a une page detaillee,
-            optimisee pour la conversion et le referencement local.
+            Choisissez la catégorie qui correspond à votre besoin pour accéder à une page détaillée,
+            optimisée pour la conversion et le référencement local.
           </p>
         </div>
       </section>

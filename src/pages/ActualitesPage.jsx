@@ -5,16 +5,16 @@ function ActualitesPage() {
   return (
     <>
       <Seo
-        title="Actualites marche or et luxe"
-        description="Suivez l'actualite du marche de l'or, des montres et des metaux precieux avec La Maison de l'Or."
+        title="Actualités marché or et luxe"
+        description="Suivez l'actualité du marché de l'or, des montres et des métaux précieux avec La Maison de l'Or."
         path="/actualites"
       />
 
       <section className="section actualites-hero">
         <div className="hero-ambient" aria-hidden="true" />
         <div className="container">
-          <p className="eyebrow">Actualites</p>
-          <h1>Le marche des metaux precieux et du luxe</h1>
+          <p className="eyebrow">Actualités</p>
+          <h1>Le marché des métaux précieux et du luxe</h1>
           <p className="lead-text">
             Analyse, tendances et conseils pour mieux comprendre la valeur de vos biens avant de
             vendre.

@@ -44,7 +44,7 @@ function PriceTicker() {
     <div
       className="tradingview-widget-container ticker-tv"
       ref={containerRef}
-      aria-label="Cours des metaux precieux en direct — TradingView"
+      aria-label="Cours des métaux précieux en direct — TradingView"
     />
   );
 }

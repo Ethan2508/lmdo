@@ -102,7 +102,7 @@ function Layout() {
               </div>
 
               <NavLink className={linkClass} to="/actualites" onClick={closeAll}>
-                Actualites
+                Actualités
               </NavLink>
               <NavLink className={linkClass} to="/kit-envoi" onClick={closeAll}>
                 Kit d'envoi
@@ -157,13 +157,13 @@ function Layout() {
               <div>
                 <h4>Navigation</h4>
                 <ul>
-                  <li><NavLink to="/actualites" onClick={closeAll}>Actualites</NavLink></li>
+                  <li><NavLink to="/actualites" onClick={closeAll}>Actualités</NavLink></li>
                   <li><NavLink to="/kit-envoi" onClick={closeAll}>Kit d'envoi</NavLink></li>
                   <li><NavLink to="/contact" onClick={closeAll}>Contact</NavLink></li>
                 </ul>
               </div>
               <div>
-                <h4>Coordonnees</h4>
+                <h4>Coordonnées</h4>
                 <p><strong>{siteConfig.address}</strong></p>
                 <p><a href={siteConfig.phoneHref}>{siteConfig.phone}</a></p>
                 <p><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></p>
