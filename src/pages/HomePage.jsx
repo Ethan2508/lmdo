@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Seo from "../components/Seo";
 import { siteConfig } from "../data/site";
 import { productRoutes } from "../data/products";
@@ -78,6 +78,7 @@ const TRUSTS = [
 
 function HomePage() {
   const prices = usePrices();
+  const navigate = useNavigate();
 
   const schema = [
     {
@@ -257,13 +258,16 @@ function HomePage() {
                   <div className="hp-product-body">
                     <h3>{p.name}</h3>
                     <p>{meta.shortText}</p>
-                    <Link
-                      to="/contact"
+                    {/* span et non <Link> : un lien ne peut pas contenir un autre lien */}
+                    <span
                       className="hp-product-estimate-btn"
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        navigate("/contact");
+                      }}
                     >
                       Demander une estimation
-                    </Link>
+                    </span>
                   </div>
                 </Link>
               );

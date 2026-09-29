@@ -1,5 +1,8 @@
-import { useEffect } from "react";
+import { createContext, useContext, useEffect } from "react";
 import { siteConfig } from "../data/site";
+
+// Rempli pendant le prerender (src/entry-server.jsx) pour écrire le <head> statique.
+export const HeadContext = createContext(null);
 
 function ensureMeta(selector, attrs) {
   let element = document.head.querySelector(selector);
@@ -13,16 +16,26 @@ function ensureMeta(selector, attrs) {
   });
 }
 
-function Seo({ title, description, path = "/", schema = [] }) {
-  useEffect(() => {
-    const fullTitle = `${title} | ${siteConfig.name}`;
-    const canonicalUrl = `${siteConfig.domain}${path}`;
+function Seo({ title, description, path = "/", schema = [], noindex = false }) {
+  const head = useContext(HeadContext);
+  const fullTitle = `${title} | ${siteConfig.name}`;
+  const canonicalUrl = `${siteConfig.domain}${path}`;
 
+  if (head) {
+    Object.assign(head, { title: fullTitle, description, canonicalUrl, schema, noindex });
+  }
+
+  useEffect(() => {
     document.title = fullTitle;
 
     ensureMeta('meta[name="description"]', {
       name: "description",
       content: description
+    });
+
+    ensureMeta('meta[name="robots"]', {
+      name: "robots",
+      content: noindex ? "noindex, follow" : "index, follow"
     });
 
     ensureMeta('meta[property="og:title"]', {
@@ -68,6 +81,11 @@ function Seo({ title, description, path = "/", schema = [] }) {
     }
     canonical.setAttribute("href", canonicalUrl);
 
+    // Le JSON-LD pré-rendu est remplacé par celui de la page courante.
+    document.head
+      .querySelectorAll("script[data-seo-ssr]")
+      .forEach((script) => script.remove());
+
     const injectedScripts = schema.map((item) => {
       const script = document.createElement("script");
       script.type = "application/ld+json";
@@ -79,7 +97,7 @@ function Seo({ title, description, path = "/", schema = [] }) {
     return () => {
       injectedScripts.forEach((script) => script.remove());
     };
-  }, [title, description, path, schema]);
+  }, [fullTitle, description, canonicalUrl, schema, noindex]);
 
   return null;
 }
