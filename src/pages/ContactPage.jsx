@@ -19,6 +19,7 @@ function ContactPage() {
       type: "contact",
       nom: fd.get("fullname"),
       email: fd.get("email"),
+      telephone: fd.get("telephone"),
       objetType: fd.get("assetType"),
       message: fd.get("message"),
       website: fd.get("website"),
@@ -91,6 +92,16 @@ function ContactPage() {
 
             <label htmlFor="email">Email</label>
             <input id="email" name="email" type="email" required placeholder="Votre email" />
+
+            <label htmlFor="telephone">Téléphone</label>
+            <input
+              id="telephone"
+              name="telephone"
+              type="tel"
+              autoComplete="tel"
+              required
+              placeholder="06 00 00 00 00"
+            />
 
             <label htmlFor="assetType">Type de bien</label>
             <select id="assetType" name="assetType" required defaultValue="">
