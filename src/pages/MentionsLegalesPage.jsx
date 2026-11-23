@@ -62,6 +62,19 @@ function MentionsLegalesPage() {
             Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant{" "}
             <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
           </p>
+
+          <h2 id="cookies">Cookies</h2>
+          <p>
+            Avec votre accord, ce site dépose des cookies Google pour deux usages. Aucun n'est déposé tant que
+            vous n'avez pas fait votre choix, et vous pouvez le modifier à tout moment via le lien
+            « Gestion des cookies » en bas de page. Votre choix est conservé 6 mois.
+          </p>
+          <table className="legal-table">
+            <tbody>
+              <tr><th>Mesure d'audience</th><td>Google Analytics : pages consultées et demandes envoyées. Cookies _ga, conservés 13 mois au plus.</td></tr>
+              <tr><th>Publicité</th><td>Google Ads : savoir quelles annonces amènent des demandes. Cookies _gcl, conservés 90 jours au plus.</td></tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </>

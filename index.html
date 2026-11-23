@@ -1,6 +1,32 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <!-- Consentement cookies (mode Consentement Google v2) : tout est refusé par
+         défaut, et le choix enregistré (src/lib/consent.js) est réappliqué avant
+         le chargement de GTM et GA4. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      try {
+        var c = JSON.parse(localStorage.getItem('cookie_consent'));
+        if (c && Date.now() - c.date < 182 * 24 * 60 * 60 * 1000) {
+          gtag('consent', 'update', {
+            analytics_storage: c.analytics ? 'granted' : 'denied',
+            ad_storage: c.ads ? 'granted' : 'denied',
+            ad_user_data: c.ads ? 'granted' : 'denied',
+            ad_personalization: c.ads ? 'granted' : 'denied'
+          });
+        }
+      } catch (e) {}
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -3,6 +3,8 @@ import { NavLink, Outlet } from "react-router-dom";
 import { siteConfig } from "../data/site";
 import { productRoutes } from "../data/products";
 import PriceTicker from "./PriceTicker";
+import CookieBanner from "./CookieBanner";
+import { openCookieSettings } from "../lib/consent";
 
 const NAV_CATEGORIES = [
   {
@@ -175,11 +177,16 @@ function Layout() {
             <p>© {new Date().getFullYear()} {siteConfig.name} — SAS au capital de 5 000 € — SIREN 908 128 721 — {siteConfig.address}</p>
             <div className="footer-bottom-right">
               <NavLink to="/mentions-legales" onClick={closeAll}>Mentions légales</NavLink>
+              <button type="button" className="footer-cookie-btn" onClick={openCookieSettings}>
+                Gestion des cookies
+              </button>
               <span className="footer-credit">Site réalisé par <a href="https://stapes.fr" target="_blank" rel="noopener noreferrer">stapes.fr</a></span>
             </div>
           </div>
         </div>
       </footer>
+
+      <CookieBanner />
     </>
   );
 }
