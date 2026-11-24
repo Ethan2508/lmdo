@@ -69,7 +69,7 @@ function ContactPage() {
               <li>
                 Email: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
               </li>
-              <li>Adresse: {siteConfig.address}</li>
+              <li className="contact-address">Adresse: {siteConfig.address}</li>
               <li>Zone: {siteConfig.city} et {siteConfig.region}</li>
             </ul>
           </div>
